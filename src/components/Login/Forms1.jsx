@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const Forms1 = () => {
 
@@ -10,9 +12,25 @@ const Forms1 = () => {
 
   const [errors, setErrors] = useState({});
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const ValidationError = validateForm(formData);
+
+    axios.post('http://localhost:8080/login', {email, password})
+    .then(res => {
+      console.log(res)
+      if(res.data === "Success") {
+        navigate('/');
+      }
+    })
+    .catch(err => console.log(err))
+    
+
     setErrors(ValidationError);
     if (Object.keys(ValidationError).length === 0) {
       console.log("Successfully Logged in", formData);

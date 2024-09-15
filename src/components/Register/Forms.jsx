@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Forms = () => {
 
@@ -8,16 +10,28 @@ const Forms = () => {
     email: "",
     password: ""
   })
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const ValidationError = validateForm(formData);
+    
+    axios.post('http://localhost:8080/signup', {username, email, password})
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+    navigate('/login')
+
     setErrors(ValidationError);
     if (Object.keys(ValidationError).length === 0) {
       console.log("Successfully Submitted", formData);
     }
+    
   }
 
   const handleChange = (e) => {
