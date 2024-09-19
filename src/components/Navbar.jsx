@@ -1,10 +1,22 @@
 import React from 'react'
 import logo from "../assets/image1.png";
-import { navItems } from '../constants'
+import Home from './Home';
+import Features from './Features';
+import Working from './Working';
+import Testimonials from './Testimonials';
+import Pricing from './Pricing';
+// import { navItems } from '../constants'
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
+    const navItems = [
+        { label: "Home", href: "/", element: <Home /> },
+        { label: "Features", href: "/features", element: <Features /> },
+        { label: "Workflow", href: "/working", element: <Working /> },
+        { label: "Pricing", href: "/pricing", element: <Pricing /> },
+        { label: "Testimonials", href: "/testimonials", element: <Testimonials /> },
+    ];
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const toggleNavbar = () => {

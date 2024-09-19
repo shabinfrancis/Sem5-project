@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div>Testimonials</div>
+    <>
+      <div>Testimonials</div>
+    </>
   )
 }
 

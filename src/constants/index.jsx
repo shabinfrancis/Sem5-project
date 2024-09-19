@@ -4,10 +4,10 @@ import { Fingerprint } from "lucide-react";
 import { ShieldHalf } from "lucide-react";
 import { PlugZap } from "lucide-react";
 import { GlobeLock } from "lucide-react";
-import Features from "../components/Features";
-import Working from "../components/Working";
-import Pricing from "../components/Pricing";
-import Testimonials from "../components/Testimonials";
+// import Features from "../components/Features";
+// import Working from "../components/Working";
+// import Pricing from "../components/Pricing";
+// import Testimonials from "../components/Testimonials";
 
 // import user1 from "../assets/profile-pictures/user1.jpg";
 // import user2 from "../assets/profile-pictures/user2.jpg";
@@ -16,12 +16,12 @@ import Testimonials from "../components/Testimonials";
 // import user5 from "../assets/profile-pictures/user5.jpg";
 // import user6 from "../assets/profile-pictures/user6.jpg";
 
-export const navItems = [
-  { label: "Features", href: "/features", element: <Features /> },
-  { label: "Workflow", href: "/working", element: <Working /> },
-  { label: "Pricing", href: "/pricing",  element: <Pricing /> },
-  { label: "Testimonials", href: "/testimonials", element: <Testimonials /> },
-];
+// export const navItems = [
+//   { label: "Features", href: "/features", element: <Features /> },
+//   { label: "Workflow", href: "/working", element: <Working /> },
+//   { label: "Pricing", href: "/pricing",  element: <Pricing /> },
+//   { label: "Testimonials", href: "/testimonials", element: <Testimonials /> },
+// ];
 
 export const testimonials = [
   {
