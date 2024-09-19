@@ -6,6 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10vw 10vw;
+    overflow: hidden;
 }
 
 .form-container {

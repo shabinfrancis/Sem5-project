@@ -1,19 +1,20 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, useLocation, Form } from 'react-router-dom'
-import Working from './components/Working'
-import Pricing from './components/Pricing'
-import Features from './components/Features'
-import Testimonials from './components/Testimonials'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import Footer from './components/Footer'
-import Forms1 from './components/Login/Forms1'
-import Forms from './components/Register/Forms'
+import { BrowserRouter as Router, Route, useLocation, Form } from 'react-router-dom'
+// import Working from './components/Working'
+// import Pricing from './components/Pricing'
+// import Features from './components/Features'
+// import Testimonials from './components/Testimonials'
+// import Navbar from './components/Navbar'
+// import HeroSection from './components/HeroSection'
+// import Footer from './components/Footer'
+// import Forms1 from './components/Login/Forms1'
+// import Forms from './components/Register/Forms'
+import MainLayout from './components/MainLayout'
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/features" element={<Features />} />
@@ -30,7 +31,16 @@ const App = () => {
 
 
 
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* <BrowserRouter>
+      <Routes> */}
+        <Router>
+          <MainLayout />
+        </Router>
+      {/* </Routes>
+      </BrowserRouter> */}
+
+      
     </>
   )
 }
