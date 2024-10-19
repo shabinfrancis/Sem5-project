@@ -7,6 +7,8 @@ const Uploader = () => {
 
   const [image, setImage] = useState(null)
   const [filename, setFilename] = useState("No file selected")
+  const [uploaded, setUploaded] = useState(false)
+  const [ocrText, setOcrText] = useState("")
   return (
     <main>
       <form
