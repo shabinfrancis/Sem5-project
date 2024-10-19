@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, BrowserRouter } from 'react-router-dom';
-import Working from './Working'
+// import Working from './Working'
+import Uploader from './Uploader'
 import Pricing from './Pricing'
 import Features from './Features'
 import Testimonials from './Testimonials'
@@ -33,7 +34,7 @@ const MainLayout = () => {
             {!shouldHideComponents && <Navbar />}
             <Routes>
                 <Route path="/features" element={<Features />} />
-                <Route path='/working' element={<Working />} />
+                <Route path='/working' element={<Uploader />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path='/login' element={<Forms1 />} />
