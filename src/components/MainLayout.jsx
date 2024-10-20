@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, BrowserRouter } from 'react-router-dom';
-// import Working from './Working'
-import Uploader from './Uploader'
+import Working from './Working'
+// import Uploader from './Uploader'
+import Uploder from './Uploder';
 import Pricing from './Pricing'
 import Features from './Features'
 import Testimonials from './Testimonials'
@@ -23,7 +24,7 @@ const MainLayout = () => {
     const location = useLocation();
 
     // Define routes where Navbar, HeroSection, and Footer should not appear
-    const hideComponentsOnRoutes = ['/login', '/signup'];
+    const hideComponentsOnRoutes = ['/login', '/signup', '/upload', '/workflow'];
 
     // Check if the current path matches one of the routes where components should be hidden
     const shouldHideComponents = hideComponentsOnRoutes.includes(location.pathname);
@@ -33,10 +34,10 @@ const MainLayout = () => {
             {/* Conditionally render Navbar, HeroSection, and Footer */}
             {!shouldHideComponents && <Navbar />}
             <Routes>
-                <Route path="/features" element={<Features />} />
-                <Route path='/working' element={<Uploader />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/workflow" element={<Working />} />
+                <Route path='/upload' element={<Uploder />} />
+                {/* <Route path="/pricing" element={<Pricing />} /> */}
+                {/* <Route path="/testimonials" element={<Testimonials />} /> */}
                 <Route path='/login' element={<Forms1 />} />
                 <Route path="/signup" element={<Forms />} />
                 {/* Add other routes here */}

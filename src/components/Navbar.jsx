@@ -8,14 +8,15 @@ import Pricing from './Pricing';
 // import { navItems } from '../constants'
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Uploder from './Uploder';
 
 const Navbar = () => {
     const navItems = [
         { label: "Home", href: "/", element: <Home /> },
-        { label: "Features", href: "/features", element: <Features /> },
-        { label: "Workflow", href: "/working", element: <Working /> },
-        { label: "Pricing", href: "/pricing", element: <Pricing /> },
-        { label: "Testimonials", href: "/testimonials", element: <Testimonials /> },
+        // { label: "Features", href: "/features", element: <Features /> },
+        { label: "Workflow", href: "/workflow", element: <Working /> },
+        // { label: "Pricing", href: "/pricing", element: <Pricing /> },
+        // { label: "Testimonials", href: "/testimonials", element: <Testimonials /> },
     ];
     const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -70,9 +71,10 @@ const Navbar = () => {
                     )}
                 </div>
             </nav>
-            <div className="flex justify-center items-center flex-shrink-0">
+            {/* <div className="flex justify-center items-center flex-shrink-0">
                 <img src={logo} alt="logo" />
-            </div>
+            </div> */}
+            
         </>
 
     )

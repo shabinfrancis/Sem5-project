@@ -10,7 +10,7 @@ const HeroSection = () => {
                 </h1>
             </div>
             <div className="flex justify-center my-10">
-                <a href="#" className='bg-gradient-to-r from-blue-500 to-blue-800 py-3 px-4 mx-3 rounded-md text-white font-semibold'>Start for Free</a>
+                <a href="/upload" className='bg-gradient-to-r from-blue-500 to-blue-800 py-3 px-4 mx-3 rounded-md text-white font-semibold'>Get Started</a>
             </div>
             <div className="flex mt-10 justify-center">
                 <video 
